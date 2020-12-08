@@ -29,12 +29,15 @@ namespace InoEEPROMProgrammer
         public bool Open()
         {
             _port.BaudRate = 115200;
-            _port.Open();
             _port.DtrEnable = true;
             _port.RtsEnable = true;
+            _port.Open();
             while (!_port.IsOpen) ;
+            Console.WriteLine("Waiting for Arduino to boot up after (probable) reboot...");
+            Task.Delay(2000).Wait();
             _port.DiscardInBuffer();
             _port.DiscardOutBuffer();
+            Console.WriteLine("Trying!");
             WriteByte(I2CCommands.PING, false);
             return ReadByte() == I2CCommands.PONG;
         }
@@ -55,7 +58,7 @@ namespace InoEEPROMProgrammer
             {
                 receivedBytes += _port.Read(buffer, 0, count);
             }
-            
+
             return buffer;
         }
 
