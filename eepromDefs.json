@@ -26,5 +26,12 @@
     "pageSize": 16,
     "wordSize": 8,
     "blockCount": 8
+  },
+  "24c512": {
+    "addressSize": 2,
+    "memorySize": 524288,
+    "pageSize": 127,
+    "wordSize": 8,
+    "blockCount": 1
   }
 }
