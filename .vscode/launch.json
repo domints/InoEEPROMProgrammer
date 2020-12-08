@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/bin/Debug/net5.0/InoEEPROMProgrammer.dll",
-            "args": ["r", "-d", "24lc16b", "-a" ,"0x50", "-o", "out.bin", "/dev/cu.usbserial-A9YD9ZFJ"],
+            "args": ["r", "-d", "24c512", "-a" ,"0x50", "-o", "out.bin", "/dev/cu.usbserial-A9YD9ZFJ"],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",

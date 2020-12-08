@@ -32,7 +32,9 @@ namespace InoEEPROMProgrammer.AppCommands
 
             byte address = string.IsNullOrWhiteSpace(deviceAddress) ? 0x50 : deviceAddress.ToByte();
             var eeprom = new I2CEEPROM(portName, address, definition);
-            eeprom.WriteToAddress(0, File.ReadAllBytes(inFile));
+            var fileContent = File.ReadAllBytes(inFile);
+            eeprom.WriteToAddress(0, fileContent);
+            Console.WriteLine($"Succesfully wrote {fileContent.Length} bytes to EEPROM.");
         }
     }
 }
