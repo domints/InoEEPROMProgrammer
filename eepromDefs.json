@@ -1,0 +1,30 @@
+{
+  "24lc01": {
+    "addressSize": 1,
+    "memorySize": 1024,
+    "pageSize": 8,
+    "wordSize": 8,
+    "blockCount": 1
+  },
+  "24c02": {
+    "addressSize": 1,
+    "memorySize": 2048,
+    "pageSize": 8,
+    "wordSize": 8,
+    "blockCount": 1
+  },
+  "24lc16b": {
+    "addressSize": 1,
+    "memorySize": 16384,
+    "pageSize": 16,
+    "wordSize": 8,
+    "blockCount": 8
+  },
+  "24c16": {
+    "addressSize": 1,
+    "memorySize": 16384,
+    "pageSize": 16,
+    "wordSize": 8,
+    "blockCount": 8
+  }
+}
