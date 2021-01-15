@@ -1,37 +1,42 @@
 {
-  "24lc01": {
+  "24lc01b": {
     "addressSize": 1,
     "memorySize": 1024,
     "pageSize": 8,
     "wordSize": 8,
-    "blockCount": 1
+    "blockCount": 1,
+    "maxSpeed": 400000
   },
   "24c02": {
     "addressSize": 1,
     "memorySize": 2048,
     "pageSize": 8,
     "wordSize": 8,
-    "blockCount": 1
+    "blockCount": 1,
+    "maxSpeed": 400000
   },
   "24lc16b": {
     "addressSize": 1,
     "memorySize": 16384,
     "pageSize": 16,
     "wordSize": 8,
-    "blockCount": 8
+    "blockCount": 8,
+    "maxSpeed": 400000
   },
   "24c16": {
     "addressSize": 1,
     "memorySize": 16384,
     "pageSize": 16,
     "wordSize": 8,
-    "blockCount": 8
+    "blockCount": 8,
+    "maxSpeed": 400000
   },
-  "24c512": {
+  "24fc512": {
     "addressSize": 2,
     "memorySize": 524288,
     "pageSize": 127,
     "wordSize": 8,
-    "blockCount": 1
+    "blockCount": 1,
+    "maxSpeed": 1000000
   }
 }
