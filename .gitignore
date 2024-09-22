@@ -363,3 +363,5 @@ FodyWeavers.xsd
 
 
 *.bin
+
+.DS_Store

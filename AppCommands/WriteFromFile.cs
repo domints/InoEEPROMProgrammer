@@ -30,7 +30,7 @@ namespace InoEEPROMProgrammer.AppCommands
         {
             var definition = new DefinitionProvider().Get(deviceName);
 
-            byte address = string.IsNullOrWhiteSpace(deviceAddress) ? 0x50 : deviceAddress.ToByte();
+            byte address = string.IsNullOrWhiteSpace(deviceAddress) ? (byte)0x50 : deviceAddress.ToByte();
             var eeprom = new I2CEEPROM(portName, address, definition);
             var fileContent = File.ReadAllBytes(inFile);
             eeprom.WriteToAddress(0, fileContent);
