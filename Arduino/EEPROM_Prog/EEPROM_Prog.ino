@@ -11,7 +11,6 @@ int32_t mem_size = 0;
 byte word_size = 0;
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(115200);
   while (!Serial);
   
@@ -43,6 +42,10 @@ void loop() {
         word_size = Serial.read();
         Serial.write(ACK);
         return;
+      case SET_SPEED:
+        uint32_t newSpeed = read_int32();
+        Serial.write(ACK);
+        Serial.begin(newSpeed);
 
       case SCAN_I2C_BUS:
         scanI2CBus();
